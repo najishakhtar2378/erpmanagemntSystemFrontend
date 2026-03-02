@@ -38,11 +38,8 @@ export default function Navbar() {
     navigate(getDashboardUrl());
   };
 
-  // Wait for hydration to complete
-  if (!isLoaded) return null;
-  
-  // Hide navbar on login/signup pages when not logged in
-  if (!token) return null;
+  // Wait for hydration to complete - show empty navbar during loading to prevent layout shift
+  // Don't return null - this causes navbar to disappear completely
 
   return (
     <nav className="navbar">
@@ -66,42 +63,50 @@ export default function Navbar() {
           <span style={{ fontWeight: "bold", color: "white", fontSize: "18px", textShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>Quantivo ERP</span>
         </div>
       </div>
-      <Sidebar />
+      {isLoaded && token && <Sidebar />}
 
       <div className="navbar-links navbar-desktop">
-        <Link to="/products">Products</Link>
-        <Link to={getDashboardUrl()}>Dashboard</Link>
-        <Link to="/analytics">Analytics</Link>
-        <Link to="/customers/new">Add Customer</Link>
-        <Link to="/customers">Customers</Link>
-        <Link to="/sales-orders">Sales Orders</Link>
-        
-        {/* Admin Only Links */}
-        {isAdmin() && (
+        {isLoaded && token && (
           <>
-            <Link to="/admin/users" className="admin-link">⚙️ Settings</Link>
-          </>
-        )}
+            <Link to="/products">Products</Link>
+            <Link to={getDashboardUrl()}>Dashboard</Link>
+            <Link to="/analytics">Analytics</Link>
+            <Link to="/customers/new">Add Customer</Link>
+            <Link to="/customers">Customers</Link>
+            <Link to="/sales-orders">Sales Orders</Link>
+            
+            {/* Admin Only Links */}
+            {isAdmin() && (
+              <>
+                <Link to="/admin/users" className="admin-link">⚙️ Settings</Link>
+              </>
+            )}
 
-        {/* Manager & Admin Links */}
-        {(isManager() || isAdmin()) && (
-          <>
-            <Link to="/salesorder">Create Order</Link>
+            {/* Manager & Admin Links */}
+            {(isManager() || isAdmin()) && (
+              <>
+                <Link to="/salesorder">Create Order</Link>
+              </>
+            )}
           </>
         )}
       </div>
 
       <div className="navbar-right">
-        <div className="user-info">
-          <div className="user-details">
-            <span className="user-name">{user?.name || "User"}</span>
-            <span className={`user-role role-${user?.role || "staff"}`}>
-              {user?.role?.toUpperCase() || "STAFF"}
-            </span>
+        {isLoaded && token && (
+          <div className="user-info">
+            <div className="user-details">
+              <span className="user-name">{user?.name || "User"}</span>
+              <span className={`user-role role-${user?.role || "staff"}`}>
+                {user?.role?.toUpperCase() || "STAFF"}
+              </span>
+            </div>
           </div>
-        </div>
+        )}
 
-        {!token ? (
+        {!isLoaded ? (
+          <div style={{ width: "60px", height: "36px" }}></div>
+        ) : !token ? (
           <Link to="/login" className="login-btn">
             Login
           </Link>

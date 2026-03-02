@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { isAdmin, isManager } from "../utils/roleUtils";
 import "./Sidebar.css";
 
 export default function Sidebar() {
@@ -23,6 +24,19 @@ export default function Sidebar() {
     { label: "Order List", path: "/sales-orders/new", icon: "📋" },
   ];
 
+  // Add conditional menu items based on role
+  const conditionalItems = [];
+  
+  if (isManager() || isAdmin()) {
+    conditionalItems.push({ label: "Create Order", path: "/salesorder", icon: "✏️" });
+  }
+
+  if (isAdmin()) {
+    conditionalItems.push({ label: "Settings", path: "/admin/users", icon: "⚙️" });
+  }
+
+  const allMenuItems = [...menuItems, ...conditionalItems];
+
   return (
     <>
       {/* Hamburger Button */}
@@ -45,7 +59,7 @@ export default function Sidebar() {
         </div>
 
         <nav className="sidebar-nav">
-          {menuItems.map((item) => (
+          {allMenuItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}

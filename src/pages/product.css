@@ -1,0 +1,195 @@
+/* Container */
+.product-container {
+  padding: 40px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Heading */
+.product-container h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.product-container p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Form Card */
+.product-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* Inputs */
+.product-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.product-form input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+/* Button */
+.product-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background: linear-gradient(135deg, #1976d2, #125ea8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.product-form button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-table thead {
+  background: #1976d2;
+  color: white;
+}
+
+.product-table th,
+.product-table td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+.product-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.product-table tbody tr:hover {
+  background: #f1f7ff;
+}
+
+/* Action Buttons */
+.product-table button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 6px;
+  transition: 0.2s;
+}
+
+/* Edit Button */
+.product-table button:first-child {
+  background: #ff9800;
+  color: white;
+}
+
+.product-table button:first-child:hover {
+  background: #e68900;
+}
+
+/* Delete Button */
+.product-table .btn {
+  background: #e53935;
+  color: white;
+}
+
+.product-table .btn:hover {
+  background: #c62828;
+}
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background: #ff9800;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e53935;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+}
+.add-btn{
+  width: 30%;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.status-in-stock {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.status-badge.status-low-stock {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.status-out-of-stock {
+  background: #ffcdd2;
+  color: #c62828;
+}

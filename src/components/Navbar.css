@@ -1,0 +1,272 @@
+.navbar {
+  height: 70px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 0 15px;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  max-width: 110px;
+  border-radius: 8px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.08);
+}
+
+.navbar-left h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  padding: 8px 0 6px 0;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.navbar-links a:hover {
+  color: #ffd700;
+  border-bottom-color: #ffd700;
+}
+
+.navbar-links a.admin-link {
+  color: #ffd740;
+  font-weight: 700;
+  border-bottom-color: #ffd740;
+}
+
+.navbar-links a.admin-link:hover {
+  color: #ffeb3b;
+  border-bottom-color: #ffeb3b;
+}
+
+.navbar-desktop {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 100px;
+  gap: 20px;
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+
+.user-role {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+/* Role Badge Colors */
+.role-admin {
+  background: rgba(255, 193, 7, 0.4);
+  color: #ffd740;
+  border: none;
+}
+
+.role-manager {
+  background: rgba(100, 181, 246, 0.4);
+  color: #81d4fa;
+  border: none;
+}
+
+.role-staff {
+  background: rgba(206, 147, 216, 0.4);
+  color: #f0f0f0;
+  border: none;
+}
+
+.navbar-right button {
+  background: rgba(255, 255, 255, 0.95);
+  color: #667eea;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.navbar-right button:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-right button:active {
+  transform: translateY(0);
+}
+
+.logout-btn {
+  background: rgba(255, 107, 107, 0.95) !important;
+  color: white !important;
+}
+
+.logout-btn:hover {
+  background: #ff6b6b !important;
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}
+
+.login-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #667eea;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.login-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 12px;
+    height: 65px;
+    gap: 12px;
+  }
+
+  .navbar-left {
+    min-width: 100px;
+    padding: 0 8px;
+  }
+
+  .navbar-desktop {
+    display: none !important;
+  }
+
+  .navbar-logo {
+    height: 45px;
+    max-width: 100px;
+  }
+
+  .navbar-right {
+    min-width: auto;
+    gap: 15px;
+  }
+
+  .user-details {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 8px;
+    height: 60px;
+    gap: 8px;
+  }
+
+  .navbar-left {
+    min-width: 80px;
+    padding: 0 4px;
+  }
+
+  .navbar-logo {
+    height: 40px;
+    max-width: 90px;
+  }
+
+  .navbar-right {
+    min-width: auto;
+    gap: 10px;
+  }
+
+  .navbar-right button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .login-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .user-info {
+    gap: 8px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+}
+

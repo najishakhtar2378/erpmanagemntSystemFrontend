@@ -1,0 +1,502 @@
+.founder-page {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.founder-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.founder-hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.founder-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Founder Profile Section */
+.founder-profile {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.founder-image {
+  text-align: center;
+}
+
+.avatar-placeholder {
+  font-size: 120px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.founder-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  border: 4px solid white;
+  object-fit: cover;
+  aspect-ratio: 1 / 1.2;
+  display: block;
+}
+
+.founder-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.founder-info h2 {
+  font-size: 36px;
+  color: #1e293b;
+  margin: 0 0 5px 0;
+}
+
+.founder-title {
+  font-size: 20px;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.founder-education {
+  font-size: 16px;
+  color: #475569;
+  margin: 0 0 20px 0;
+}
+
+.founder-bio h3 {
+  font-size: 22px;
+  color: #1e293b;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.founder-bio p {
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/* Qualities Grid */
+.founder-qualities {
+  margin-top: 30px;
+}
+
+.founder-qualities h3 {
+  font-size: 22px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.quality-item {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.quality-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.quality-item h4 {
+  color: #1e293b;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.quality-item p {
+  color: #475569;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Expertise Section */
+.expertise-section {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.expertise-section h3 {
+  font-size: 28px;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.expertise-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(102, 126, 234, 0.3);
+}
+
+.expertise-card h4 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+.expertise-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Vision Section */
+.vision-section {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  border-left: 6px solid #667eea;
+}
+
+.vision-section h3 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 30px;
+}
+
+.vision-content p {
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.founder-quote {
+  font-style: italic;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Journey Section */
+.journey-section {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.journey-section h3 {
+  font-size: 28px;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  display: grid;
+  gap: 30px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 29px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% + 30px);
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timeline-marker {
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  flex-shrink: 0;
+}
+
+.timeline-content h4 {
+  font-size: 20px;
+  color: #1e293b;
+  margin: 0 0 10px 0;
+}
+
+.timeline-content p {
+  color: #475569;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Professional Experience Section */
+.professional-experience-section {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.professional-experience-section h3 {
+  font-size: 28px;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experience-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-left: 6px solid #667eea;
+  border-radius: 10px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+}
+
+.experience-header {
+  margin-bottom: 20px;
+}
+
+.experience-header h4 {
+  font-size: 24px;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.experience-location {
+  color: #667eea;
+  font-weight: 600;
+  margin: 0;
+  font-size: 15px;
+}
+
+.experience-details {
+  margin-top: 20px;
+}
+
+.experience-role {
+  font-size: 16px;
+  color: #764ba2;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.experience-description {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+}
+
+.experience-highlights h5 {
+  font-size: 16px;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.experience-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-highlights li {
+  color: #475569;
+  font-size: 14px;
+  padding: 8px 0 8px 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.experience-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.philosophy-section h3 {
+  font-size: 28px;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.philosophy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.philosophy-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+}
+
+.philosophy-card h4 {
+  font-size: 18px;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+.philosophy-card p {
+  color: #475569;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .founder-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .founder-profile {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .avatar-placeholder {
+    font-size: 80px;
+  }
+
+  .founder-info h2 {
+    font-size: 28px;
+  }
+
+  .qualities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-section,
+  .journey-section,
+  .professional-experience-section,
+  .philosophy-section {
+    padding: 30px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+  }
+
+  .timeline-marker {
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .journey-section h3,
+  .expertise-section h3,
+  .professional-experience-section h3,
+  .philosophy-section h3,
+  .vision-section h3 {
+    font-size: 22px;
+  }
+}

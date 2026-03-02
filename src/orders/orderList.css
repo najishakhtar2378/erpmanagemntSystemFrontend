@@ -1,0 +1,141 @@
+.orders-page {
+  padding: 30px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.orders-page h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Empty state */
+.empty-text {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  color: #777;
+}
+
+/* Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.orders-table th {
+  background: #1976d2;
+  color: white;
+  text-align: left;
+  padding: 14px;
+  font-size: 14px;
+}
+
+.orders-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.orders-table tr:hover {
+  background: #f1f7ff;
+}
+
+/* Status badges */
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+.add-btn{
+  width: 30%;
+}
+
+/* Payment Status Badge */
+.payment-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.payment-status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.payment-status.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Confirm Payment Button */
+.confirm-payment-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+  gap: 4px;
+}
+
+.confirm-payment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Order Actions Container */
+.action-buttons-order {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .action-buttons-order {
+    gap: 6px;
+  }
+
+  .confirm-payment-btn,
+  .cancel-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,462 @@
+/* ==================== SEARCH FILTER PANEL ==================== */
+
+.search-filter-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== SEARCH BAR ==================== */
+
+.search-bar {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+}
+
+.search-icon {
+  font-size: 1.1rem;
+  margin-right: 8px;
+  color: #999;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 8px;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.clear-search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  margin-left: 4px;
+  color: #999;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-search-btn:hover {
+  color: #667eea;
+}
+
+/* ==================== FILTER TOGGLE BUTTON ==================== */
+
+.filter-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.filter-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.filter-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.filter-icon {
+  font-size: 1.1rem;
+}
+
+.filter-badge {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.toggle-icon {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+/* ==================== RESET BUTTON ==================== */
+
+.reset-btn {
+  padding: 10px 16px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* ==================== FILTERS PANEL ==================== */
+
+.filters-panel {
+  width: 100%;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 12px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== FILTER GRID ==================== */
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== FILTER INPUTS ==================== */
+
+.filter-select,
+.filter-date,
+.filter-number,
+.filter-text-input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.filter-select:focus,
+.filter-date:focus,
+.filter-number:focus,
+.filter-text-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+/* ==================== CHECKBOX GROUP ==================== */
+
+.filter-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.checkbox-text {
+  user-select: none;
+}
+
+/* ==================== DATE RANGE GROUP ==================== */
+
+.filter-daterange-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.daterange-separator {
+  font-size: 0.85rem;
+  color: #999;
+  font-weight: 500;
+  padding: 0 4px;
+}
+
+.filter-date {
+  flex: 1;
+}
+
+/* ==================== FILTER ACTIONS ==================== */
+
+.filter-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e9ecef;
+}
+
+.filter-apply-btn,
+.filter-clear-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-apply-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.filter-apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.filter-clear-btn {
+  background: #fff0f0;
+  color: #ff6b6b;
+  border: 1px solid #ffd4d4;
+}
+
+.filter-clear-btn:hover {
+  background: #ffe0e0;
+}
+
+/* ==================== MOBILE RESPONSIVE (480px) ==================== */
+
+@media (max-width: 480px) {
+  .search-filter-panel {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .search-bar {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .search-input {
+    padding: 8px 6px;
+    font-size: 0.9rem;
+  }
+
+  .filter-toggle-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 12px;
+  }
+
+  .reset-btn {
+    width: 100%;
+  }
+
+  .filters-panel {
+    padding: 16px;
+    margin-top: 10px;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .filter-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-apply-btn,
+  .filter-clear-btn {
+    flex: 1;
+    padding: 10px 12px;
+  }
+
+  .filter-daterange-group {
+    flex-direction: column;
+  }
+
+  .daterange-separator {
+    display: none;
+  }
+
+  .filter-date {
+    width: 100%;
+  }
+}
+
+/* ==================== TABLET RESPONSIVE (481px - 768px) ==================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .search-filter-panel {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .search-bar {
+    min-width: 150px;
+  }
+
+  .filters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .filter-actions {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .filter-apply-btn,
+  .filter-clear-btn {
+    flex: 1;
+  }
+}
+
+/* ==================== DESKTOP (769px+) ==================== */
+
+@media (min-width: 769px) {
+  .search-filter-panel {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .filters-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .filter-actions {
+    gap: 12px;
+  }
+}
+
+/* ==================== HOVER & FOCUS STATES ==================== */
+
+.filter-select:hover,
+.filter-date:hover,
+.filter-number:hover,
+.filter-text-input:hover {
+  border-color: #667eea;
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+
+.filter-input:disabled {
+  background: #f0f0f0;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ==================== ANIMATION ==================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.search-filter-panel {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.filter-panel-hidden {
+  display: none;
+}
+
+.filter-active {
+  border-color: #667eea;
+  background: #f0f5ff;
+}

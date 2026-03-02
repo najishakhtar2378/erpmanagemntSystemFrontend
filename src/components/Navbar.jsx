@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getDashboardUrl, getUser, isAdmin, isManager } from "../utils/roleUtils";
 import "./Navbar.css";
@@ -5,12 +6,31 @@ import Sidebar from "./Sidebar";
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const token = localStorage.getItem("token");
-  const user = getUser();
+  const [token, setToken] = useState(null);
+  const [user, setUser] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Only access localStorage on client-side
+    try {
+      const storedToken = localStorage.getItem("token");
+      setToken(storedToken);
+      setUser(getUser());
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
+    }
+    setIsLoaded(true);
+  }, []);
 
   const logoutHandler = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    try {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+    } catch (error) {
+      console.error("Error clearing localStorage:", error);
+    }
+    setToken(null);
+    setUser(null);
     navigate("/login");
   };
 
@@ -18,7 +38,11 @@ export default function Navbar() {
     navigate(getDashboardUrl());
   };
 
-  if (!token) return null; // login/signup page pe navbar nahi dikhega
+  // Wait for hydration to complete
+  if (!isLoaded) return null;
+  
+  // Hide navbar on login/signup pages when not logged in
+  if (!token) return null;
 
   return (
     <nav className="navbar">
